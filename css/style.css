@@ -200,7 +200,7 @@ a.active {
 .mdcomments a {
     font-size: 23px;
     margin: 0;
-    word-wrap: break-word
+    word-wrap: break-word;
     line-height: 0;
 }
 .mdcomments li {
