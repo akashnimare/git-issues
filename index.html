@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Pragma" content="no-cache">
-    <title>GitHub AMA reader</title>
+    <title>GitHub issue reader</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="AMA" ng-controller="gitCtrl">
@@ -12,7 +12,7 @@
         </a>
         <form>
             <h1>GitHub AMA Reader</h1>
-            <input type="text" id="gitusername" ng-model="username" placeholder="sindresorhus">
+            <input type="text" id="gitusername" ng-model="username" placeholder="user/repo">
             <input type="submit" value="Search" id="gitsubmitbtn" ng-click="getGitInfo()">
             <div id="gitapidata" class="clearfix"></div>
         </form>
