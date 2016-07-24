@@ -46,11 +46,10 @@ img {
 h1 {
     font-family: 'Oldenburg', Arial, sans-serif;
     color: #646464;
-    font-size: 4.0em;
+    font-size: 3em;
+    margin-right: 16px;
     line-height: 1.6em;
     text-align: center;
-    /* padding-bottom: 143px; */
-    /* margin-bottom: 70px; */
 }
 h2 {
     font-size: 2.1em;
