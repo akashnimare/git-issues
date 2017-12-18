@@ -22,9 +22,10 @@
         <div ng-show="loaded" ng-cloak>
             <div ng-repeat="row in user" class="com">
                 <div class="q">
+                    <span class="issue_number">#{{row.number}}</span>
                     <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal"
                     ng-click="UserComment($event);$event.preventDefault();" ng-class="isActive(row)">{{row.title}}
-                        <span ng-repeat="label in row.labels" style="color:red">{{label.name}}</span> 
+                        <span ng-repeat="label in row.labels" style="color:red">{{label.name}}</span>
                     </a>
                     <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
                         <h2><a class="userlinks" href="{{row1.user.html_url}}">{{row1.user.login}}</h2>
