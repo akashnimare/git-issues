@@ -95,7 +95,6 @@ a:hover {
     font-size: 18px;
 }
 
-
 /* page structure */
 
 #w {
@@ -112,7 +111,6 @@ a:hover {
     display: block;
     padding: 25px 0;
 }
-
 
 /* input field */
 
@@ -268,4 +266,11 @@ a.active {
 .ng-cloak,
 .x-ng-cloak {
     display: none !important;
+}
+
+button {
+    background: #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid #cccccc;
 }
