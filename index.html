@@ -30,7 +30,7 @@
                     <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
                         ng-class="isActive(row)">{{row.title}}
                     </a>
-                    <span class="issue-label" ng-repeat="label in row.labels" ng-style="color: {{label.color}}">
+                    <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
                         <button> {{label.name}} </button>
                     </span>
                     <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
