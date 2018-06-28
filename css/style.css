@@ -74,7 +74,7 @@ h2 {
 }
 
 p {
-    font-size: 2.5em;
+    font-size: 20px;;
     line-height: 1.35em;
     margin-bottom: 12px;
 }
@@ -93,6 +93,15 @@ a:hover {
 
 .issue_number {
     font-size: 18px;
+}
+
+.avtar {
+    width: 30px;
+    position: absolute;
+    margin-top: 15px;
+    height: 30px;
+    margin-left: -20px;
+    border-radius: 50%;
 }
 
 /* page structure */

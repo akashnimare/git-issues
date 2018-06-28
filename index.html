@@ -29,6 +29,9 @@
             <div ng-repeat="row in user" class="issue-single">
                 <div class="issues-list">
                     <span class="issue_number">#{{row.number}}</span>
+                    <spna class="avtar">
+                        <img src={{row.user.avatar_url}}/ class="avtar">
+                    </spna>
                     <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
                         ng-class="isActive(row)">{{row.title}}
                     </a>
