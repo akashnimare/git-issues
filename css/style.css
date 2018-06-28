@@ -29,7 +29,7 @@ body {
     font-size: 62.5%;
     line-height: 1;
     color: #616161;
-    padding: 35px 0;
+    background: #f4f5f9;
 }
 
 input,
@@ -97,14 +97,20 @@ a:hover {
 
 /* page structure */
 
-#w {
+.reader {
     display: block;
-    width: 800px;
-    /* height: 800px; */
+    width: 100%;
+    height: 100%;
     max-height: auto;
     margin: 0 auto;
-    /* background: #f8f8f8; */
     padding: 130px 25px;
+}
+
+.searchbar {
+    display: block;
+    width: 450px;
+    margin-left: calc(35%);
+    margin-top: 12px;
 }
 
 #gitapidata {
@@ -115,14 +121,13 @@ a:hover {
 /* input field */
 
 #gitusername {
-    display: block;
+    display: inline-block;
     padding: 5px 8px;
     font-size: 2.4em;
     color: #666;
-    margin-top: 12px;
-    width: 351px;
-    margin-bottom: 15px;
-    margin-left: 214px;
+    width: 300px;
+    /* margin-bottom: 15px; */
+    /* margin-left: 214px; */
 }
 
 .next {
@@ -155,8 +160,8 @@ a:hover {
     font-weight: bold;
     float: right;
     color: #444;
-    margin-top: -57px;
-    margin-right: 234px;
+    /* margin-top: -57px; */
+    /* margin-right: 234px; */
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
     background-color: #eaeaea;
@@ -200,12 +205,26 @@ a:hover {
     margin: 30px;
 }
 
-.q {
+.issue-card {
+    margin: 0 200px;
+    width: 1000px;
+}
+
+.issues-list {
     margin: 20px 20px 20px 0px;
     text-align: left;
     border: 1.2px solid #616161;
     display: block;
     text-decoration: none;
+    padding: 10px;
+    text-align: left;
+    border: 6.2px solid #f4f5f9;
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    margin-bottom: 21px;
+    min-height: 60px;
+    border-radius: 13px;
     padding: 10px;
 }
 
