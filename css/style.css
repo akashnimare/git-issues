@@ -95,12 +95,14 @@ a:hover {
     font-size: 18px;
 }
 
-.avtar {
-    width: 30px;
+.user-avtar {
     position: absolute;
-    margin-top: 15px;
+    margin-left: -39px;
+    margin-top: 30px;
+}
+.user-avtar img {
+    width: 30px;
     height: 30px;
-    margin-left: -20px;
     border-radius: 50%;
 }
 
@@ -118,7 +120,7 @@ a:hover {
 .searchbar {
     display: block;
     width: 450px;
-    margin-left: calc(35%);
+    margin-left: calc(39%);
     margin-top: 12px;
 }
 
@@ -197,6 +199,11 @@ a:hover {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
+.issue-top {
+    margin-bottom: 15px;
+    min-height: 80px;
+    border-bottom: 2px solid #f4f5f9;
+}
 .comments {
     display: block;
     font-size: 25px;

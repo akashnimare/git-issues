@@ -31,6 +31,7 @@ app.controller("gitCtrl", function($scope, $http, marked) {
       });
     $scope.UserComment = function(event) {
       $http.get(event.target.id).success(function(data1) {
+      console.log(data1);
         $scope.user1 = data1;
       });
     };
