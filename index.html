@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <h1>Browse GitHub issues</h1>
+        <h1 class="heading">Browse GitHub issues</h1>
 
         <div class="searchbar">
             <form ng-submit="getGitInfo()">
@@ -28,7 +28,7 @@
                 </svg>
             </form>
             <div ng-show="userNotFound" ng-cloak>
-                <h2>No open issue found for {{username}}</h2> .
+                <h3>No open issue found for {{username}}.</h3>
             </div>
         </div>
 
@@ -40,9 +40,11 @@
                     <span class="user-avtar">
                         <img src={{row.user.avatar_url}}/>
                     </span>
+                    <span class="issue-title">
                     <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
                         ng-class="isActive(row)">{{row.title}}
                     </a>
+                    </span>
                     <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
                             <button> {{label.name}} </button>
                     </span>
