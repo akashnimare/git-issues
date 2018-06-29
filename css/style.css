@@ -122,6 +122,17 @@ a:hover {
     margin-top: 12px;
 }
 
+.search-icon {
+    position: absolute;
+    width: 18px;
+    height: 26px;
+    margin-top: 0px;
+    background-color: #fff;
+    color: #fff;
+    margin-left: -54px;
+}
+
+
 #gitapidata {
     display: block;
     padding: 25px 0;
@@ -135,8 +146,8 @@ a:hover {
     font-size: 2.4em;
     color: #666;
     width: 300px;
-    /* margin-bottom: 15px; */
-    /* margin-left: 214px; */
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
 }
 
 .next {
@@ -165,36 +176,16 @@ a:hover {
 #gitsubmitbtn {
     display: inline-block;
     padding: 8px 18px;
-    font-size: 20px;
-    font-weight: bold;
-    float: right;
-    color: #444;
-    /* margin-top: -57px; */
-    /* margin-right: 234px; */
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
     background-color: #eaeaea;
-    background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
     background-image: -moz-linear-gradient(#fafafa, #eaeaea);
     background-image: -ms-linear-gradient(top, #fafafa, #eaeaea);
     background-image: -o-linear-gradient(top, #fafafa, #eaeaea);
-    background-image: linear-gradient(#fafafa, #eaeaea);
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    border-bottom-color: #c5c5c5;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #gitsubmitbtn:hover {
     background-color: #dadada;
-    background-image: -webkit-linear-gradient(#eaeaea, #dadada);
-    background-image: -moz-linear-gradient(#eaeaea, #dadada);
-    background-image: -ms-linear-gradient(top, #eaeaea, #dadada);
-    background-image: -o-linear-gradient(top, #eaeaea, #dadada);
-    background-image: linear-gradient(#eaeaea, #dadada);
-    border-color: #ccc #ccc #b5b5b5;
 }
 
 #gitsubmitbtn:active {
@@ -264,7 +255,8 @@ a.active {
 }
 
 .info {
-    padding: 10px;
+    padding: 20px 15px 0px 15px;
+    border-top: 2px solid #f4f5f9;
 }
 
 .mdcomments p {
@@ -277,14 +269,24 @@ a.active {
 
 .add_comment {
     display: block;
-    background: #dbd6ce;
+    background: #f4f5f9;
     padding: 10px;
-    width: 196px;
+    margin-left: 36%;
+    margin-top: 50px;
+    margin-bottom: 11px;
+    width: 192px;
+    text-align: center;
+    color: red;
+    border-radius: 6px;
+}
+
+.add_comment:hover {
+    opacity: 0.8;
 }
 
 .add_comment a {
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, .4);
+    color: #858080;
 }
 
 [ng\:cloak],

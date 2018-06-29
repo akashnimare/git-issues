@@ -16,14 +16,15 @@
         </a>
         <h1>Browse GitHub issues</h1>
         <div class="searchbar">
-        <form>
-            <input type="text" id="gitusername" ng-model="username" placeholder="user/repo">
-            <input type="submit" value="Search" id="gitsubmitbtn" ng-click="getGitInfo()">
-            <div id="gitapidata" class="clearfix"></div>
-        </form>
-        <div ng-show="userNotFound" ng-cloak>
-            <h2>No open issue found for {{username}}</h2> .
-        </div>
+            <form ng-submit="getGitInfo()">
+                <input type="text" id="gitusername" ng-model="username" placeholder="user/repo">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" value="Search" id="gitsubmitbtn" ng-click="getGitInfo()" viewBox="0 0 75.01 72.94">
+                    <path fill="#888" d="M31.55,62.79a31.51,31.51,0,0,0,17.59-5.35L62.58,70.82a7.32,7.32,0,0,0,10.3,0,7.23,7.23,0,0,0,0-10.25L59,46.78A31,31,0,0,0,63.1,31.39,31.55,31.55,0,1,0,31.55,62.79ZM31.47,13.51A17.15,17.15,0,1,1,14.16,30.65,17.24,17.24,0,0,1,31.47,13.51Z"></path>
+                </svg>
+            </form>
+            <div ng-show="userNotFound" ng-cloak>
+                <h2>No open issue found for {{username}}</h2> .
+            </div>
         </div>
         <div ng-show="loaded" ng-cloak class="issue-card">
             <div ng-repeat="row in user" class="issue-single">
