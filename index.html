@@ -50,7 +50,6 @@
                     <span class="issue-details" marked="row.body">
                         <p>{{row.body}}</p>
                     </span>
-                </div>
 
                 <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
                     <h2>
@@ -63,6 +62,8 @@
                         <a href="{{row.html_url}}" class="cm" ng-show="$last" target="_blank">Add your Comment</a>
                         <span>
                 </div>
+            </div>
+
             </div>
             <div ng-if="user=='undefined' ||user=='null' || user.length==0 ">
                 <h2>All issues are loaded.</h2>
