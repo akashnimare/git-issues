@@ -15,7 +15,7 @@ app.controller("gitCtrl", function($scope, $http, marked) {
           $scope.username +
           "/issues?state=open&page=" +
           $scope.main.page +
-          "&per_page=100"
+          "&per_page=30"
       )
       .success(function(data) {
         // This data contains both pull_requests and issues since we only
