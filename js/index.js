@@ -5,6 +5,7 @@ app.controller("gitCtrl", function($scope, $http, marked) {
   $scope.main = {
     page: 1
   };
+  $scope.loaded = false;
   $scope.getGitInfo = function() {
     $scope.userNotFound = false;
     $scope.loaded = false;

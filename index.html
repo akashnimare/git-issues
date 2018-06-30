@@ -37,7 +37,7 @@
                     <div class="issue-top">
                         <span class="issue_number">#{{row.number}}</span>
                         <span class="user-avtar">
-                            <img src={{row.user.avatar_url}}/>
+                            <img ng-src={{row.user.avatar_url}}/>
                         </span>
                         <span class="issue-title">
                             <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
@@ -54,7 +54,7 @@
 
                     <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
                         <div class="user-details">
-                            <img src={{row1.user.avatar_url}}/>
+                            <img ng-src={{row1.user.avatar_url}}/>
                             <a class="userlinks" href="{{row1.user.html_url}}">{{row1.user.login}}
                             </a>
                         </div>
