@@ -10,7 +10,6 @@
 
 <body ng-app="git-issues" ng-controller="gitCtrl">
     <div class="reader">
-
         <div class="fork-button">
             <a href="https://github.com/akashnimare/git-issues">
                 <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
@@ -36,35 +35,35 @@
             <div ng-repeat="row in user" class="issue-single">
                 <div class="issues-list">
                     <div class="issue-top">
-                    <span class="issue_number">#{{row.number}}</span>
-                    <span class="user-avtar">
-                        <img src={{row.user.avatar_url}}/>
-                    </span>
-                    <span class="issue-title">
-                    <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
-                        ng-class="isActive(row)">{{row.title}}
-                    </a>
-                    </span>
-                    <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
+                        <span class="issue_number">#{{row.number}}</span>
+                        <span class="user-avtar">
+                            <img src={{row.user.avatar_url}}/>
+                        </span>
+                        <span class="issue-title">
+                            <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
+                                ng-class="isActive(row)">{{row.title}}
+                            </a>
+                        </span>
+                        <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
                             <button> {{label.name}} </button>
-                    </span>
+                        </span>
                     </div>
                     <span class="issue-details" marked="row.body">
                         <p>{{row.body}}</p>
                     </span>
 
-                <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
-                    <h2>
-                        <a class="userlinks" href="{{row1.user.html_url}}">{{row1.user.login}}
-                        </a>
-                    </h2>
-                    <div marked="row1.body" class="mdcomments">
+                    <div ng-repeat="row1 in user1" class="info" ng-if="row.url == row1.issue_url">
+                        <div class="user-details">
+                            <img src={{row1.user.avatar_url}}/>
+                            <a class="userlinks" href="{{row1.user.html_url}}">{{row1.user.login}}
+                            </a>
+                        </div>
+                        <div marked="row1.body" class="mdcomments"></div>
+                        <span class="add_comment" ng-show="$last">
+                            <a href="{{row.html_url}}" class="cm" ng-show="$last" target="_blank">Add your Comment</a>
+                            <span>
                     </div>
-                    <span class="add_comment" ng-show="$last">
-                        <a href="{{row.html_url}}" class="cm" ng-show="$last" target="_blank">Add your Comment</a>
-                        <span>
                 </div>
-            </div>
 
             </div>
             <div ng-if="user=='undefined' ||user=='null' || user.length==0 ">

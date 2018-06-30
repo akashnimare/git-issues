@@ -79,9 +79,9 @@ p {
 }
 
 a {
-  color: #00387b;
-  font-size: 17px;
-  text-decoration: none;
+    color: #00387b;
+    font-size: 17px;
+    text-decoration: none;
 }
 
 .issue-title a {
@@ -217,9 +217,9 @@ a:hover {
 }
 
 .issue-label {
-  margin-top: 10px;
-  padding-left: 87px;
-  display: block;
+    margin-top: 10px;
+    padding-left: 87px;
+    display: block;
 }
 
 .issue-label button {
@@ -267,9 +267,22 @@ a.active {
     color: red !important;
 }
 
+.user-details {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.user-details img {
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+}
+
 .userlinks {
-    margin: 0 !important;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    margin-top: 6px;
 }
 
 .mdcomments a {
@@ -280,9 +293,9 @@ a.active {
 }
 
 .mdcomments li {
-    font-size: 2em;
-    line-height: 1.35em;
-    margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.35em;
+  margin-bottom: 12px;
 }
 
 li {
@@ -291,7 +304,7 @@ li {
 }
 
 .info {
-    padding: 20px 15px 0px 15px;
+    padding: 20px 15px 0px 0px;
     border-top: 2px solid #f4f5f9;
 }
 
