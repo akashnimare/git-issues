@@ -31,9 +31,8 @@ app.controller("gitCtrl", function($scope, $http, marked) {
         $scope.userNotFound = true;
       });
     $scope.UserComment = function(event) {
-      $http.get(event.target.id).success(function(data1) {
-      console.log(data1);
-        $scope.user1 = data1;
+      $http.get(event.target.id).success(function(data) {
+        $scope.comments = data;
       });
     };
   };

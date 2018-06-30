@@ -57,13 +57,13 @@ h1 {
 }
 
 .heading {
-  font-size: 2em;
-  line-height: 1.5em;
-  margin-bottom: 4px;
-  margin-top: 15px;
-  text-align: center;
-  color: black;
-  margin-left: -31px;
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: 4px;
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+    margin-left: -31px;
 }
 
 .error h2 {
@@ -74,15 +74,26 @@ h1 {
 }
 
 p {
-    font-size: 20px;
-    line-height: 1.35em;
+    font-size: 18px;
+    line-height: 1.5em;
     margin-bottom: 12px;
+}
+
+button {
+    background: #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid #cccccc;
 }
 
 a {
     color: #00387b;
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: none;
+}
+
+a:hover {
+    color: #6e91b9;
 }
 
 .issue-title a {
@@ -91,10 +102,6 @@ a {
     text-decoration: none;
     margin: 11px;
     padding-top: 12px;
-}
-
-a:hover {
-    color: #6e91b9;
 }
 
 .issue_number {
@@ -158,27 +165,21 @@ a:hover {
     border-radius: 8px;
 }
 
-.next {
-    padding: 10px 18px;
-    font-size: 20px;
+.pagination {
+    padding: 5px 15px;
+    font-size: 18px;
     font-weight: bold;
     color: #444;
     margin-top: 6px;
     cursor: pointer;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-    background-color: #eaeaea;
-    background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
-    background-image: -moz-linear-gradient(#fafafa, #eaeaea);
-    background-image: -ms-linear-gradient(top, #fafafa, #eaeaea);
-    background-image: -o-linear-gradient(top, #fafafa, #eaeaea);
-    background-image: linear-gradient(#fafafa, #eaeaea);
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    border-bottom-color: #c5c5c5;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #f4f5f9;
+    border-radius: 8px;
+    border: 5px solid #ddd;
+}
+
+.pagination:hover {
+    color: #696969;
+    background: #fff;
 }
 
 #gitsubmitbtn {
@@ -294,9 +295,9 @@ a.active {
 }
 
 .mdcomments li {
-  font-size: 20px;
-  line-height: 1.35em;
-  margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.35em;
+    margin-bottom: 12px;
 }
 
 li {
