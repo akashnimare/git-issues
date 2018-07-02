@@ -45,7 +45,7 @@
 
                             <span class="issue-title">
                                 <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
-                                    ng-class="isActive(row)">{{row.title}}
+                                    ng-class="isActive(row)" title="open comments">{{row.title}}
                                 </a>
                             </span>
                             <div class="issue-summary">
