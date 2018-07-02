@@ -35,19 +35,25 @@
             <div ng-repeat="row in user" class="issue-single">
                 <div class="issues-list">
                     <div class="issue-top">
-                        <span class="issue_number">#{{row.number}}</span>
-                        <span class="user-avtar">
-                            <img ng-src={{row.user.avatar_url}}/>
-                        </span>
-                        <span class="issue-title">
-                            <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
-                                ng-class="isActive(row)">{{row.title}}
-                            </a>
-                        </span>
-                        <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
-                            <button> {{label.name}} </button>
-                        </span>
+                        <div class="left">
+                            <span class="issue_number">#{{row.number}}</span>
+                            <span class="user-avtar">
+                                <img ng-src={{row.user.avatar_url}}/>
+                            </span>
+                        </div>
+                        <div class="right">
+
+                            <span class="issue-title">
+                                <a href="{{row.html_url}}" id="{{row.comments_url}}" data-toggel="modal" ng-click="UserComment($event);$event.preventDefault();"
+                                    ng-class="isActive(row)">{{row.title}}
+                                </a>
+                            </span>
+                            <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
+                                <button> {{label.name}} </button>
+                            </span>
+                        </div>
                     </div>
+
                     <span class="issue-details" marked="row.body">
                         <p>{{row.body}}</p>
                     </span>
