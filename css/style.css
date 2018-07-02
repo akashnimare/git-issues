@@ -124,13 +124,15 @@ a:hover {
     height: 100%;
     max-height: auto;
     margin: 0 auto;
-    padding: 130px 25px;
+    padding-top: 100px;
 }
 
 .searchbar {
     display: block;
-    width: 450px;
-    margin-left: calc(37%);
+    left: 51%;
+    width: 400px;
+    position: absolute;
+    margin-left: -200px;
     margin-top: 12px;
 }
 
@@ -280,8 +282,12 @@ a:hover {
 }
 
 .issue-card {
-    margin: 0 200px;
     width: 1000px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    margin-bottom: 200px;
+    margin-top: 100px;
 }
 
 .issues-list {
