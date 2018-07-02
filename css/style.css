@@ -224,11 +224,41 @@ a:hover {
     margin-left: 75px;
 }
 
+.issue-summary {
+    display: flex;
+}
+
+.num {
+    position: relative;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 4px 5px 0 5px;
+    height: 19px;
+    display: inline-block;
+    min-width: 20px;
+}
+
+.num::after {
+    border: 6px solid #000;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -6px;
+    right: -3px;
+    content: "";
+}
+
 .issue-title {
     display: flex;
 }
 
-.issue-label {
+.issue-summary {
     margin-top: 30px;
     display: block;
 }

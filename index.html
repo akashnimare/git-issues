@@ -48,9 +48,16 @@
                                     ng-class="isActive(row)">{{row.title}}
                                 </a>
                             </span>
-                            <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
-                                <button> {{label.name}} </button>
-                            </span>
+                            <div class="issue-summary">
+                                <span class="comment-count">
+                                    <span class="num">
+                                        {{row.comments}}
+                                    </span>
+                                </span>
+                                <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
+                                    <button> {{label.name}} </button>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
