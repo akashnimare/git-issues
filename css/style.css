@@ -205,7 +205,6 @@ a:hover {
 
 .issue-top {
     margin-bottom: 25px;
-    height: -webkit-fill-available;
     min-height: 90px;
     border-bottom: 2px solid #f4f5f9;
 }
