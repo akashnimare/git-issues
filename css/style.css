@@ -102,11 +102,12 @@ a:hover {
 
 .issue_number {
     font-size: 18px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 28px;
 }
 
 .user-avtar {
-    float: right;
+    text-align: center
 }
 
 .user-avtar img {
@@ -212,7 +213,7 @@ a:hover {
     margin-top: 0px;
     flex-direction: column;
     display: flex;
-    width: 75px;
+    width: auto;
     margin: 0;
 }
 
