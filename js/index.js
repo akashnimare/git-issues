@@ -6,6 +6,7 @@ app.controller("gitCtrl", function($scope, $http, marked) {
     page: 1
   };
   $scope.loaded = false;
+  $scope.errorName = "";
   $scope.getGitInfo = function() {
     $scope.userNotFound = false;
     $scope.loaded = false;
@@ -27,8 +28,13 @@ app.controller("gitCtrl", function($scope, $http, marked) {
         $scope.user = getAllIssues;
         $scope.loaded = true;
       })
-      .error(function() {
+      .error(function(err) {
         $scope.userNotFound = true;
+        if (!$scope.username) {
+          $scope.errorName = "Please enter a vaild repo name";
+        } else {
+          $scope.errorName = "No open issue found for " + $scope.username;
+        }
       });
     $scope.UserComment = function(event) {
       $http.get(event.target.id).success(function(data) {

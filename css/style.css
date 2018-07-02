@@ -66,10 +66,8 @@ h1 {
     margin-left: -31px;
 }
 
-.error h2 {
-    font-size: 3.1em;
-    line-height: 0.95em;
-    margin-bottom: 4px;
+.error h3 {
+    font-size: 20px;
     color: #888;
 }
 
