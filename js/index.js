@@ -6,13 +6,13 @@ app.config([
   function($stateProvider, $urlRouterProvider) {
     $stateProvider.state("home", {
       url: "/home",
-      templateUrl: "/repo.html",
+      templateUrl: "/views/repo.html",
       controller: "mainCtrl"
     });
 
     $stateProvider.state("repo", {
       url: "/:username/:reponame",
-      templateUrl: "/repo.html",
+      templateUrl: "/views/repo.html",
       controller: "mainCtrl"
     });
 
