@@ -39,9 +39,9 @@ app.controller("mainCtrl", [
       $scope.loaded = false;
       $scope.nouser = false;
       // $location.url($scope.username);
-      // $scope.username = $stateParams.username
-      //   ? $stateParams.username + "/" + $stateParams.reponame
-      //   : $scope.username;
+      $scope.username = $stateParams.username
+        ? $stateParams.username + "/" + $stateParams.reponame
+        : $scope.username;
 
       $http
         .get(
