@@ -205,9 +205,14 @@ a:hover {
 }
 
 .issue-top {
-    margin-bottom: 25px;
-    min-height: 90px;
-    border-bottom: 2px solid #f4f5f9;
+    height: auto;
+}
+
+.issue-details {
+    border-top: 2px solid #f4f5f9;
+    padding-top: 20px;
+    margin-top: 10px;
+    display: block;
 }
 
 .left {
