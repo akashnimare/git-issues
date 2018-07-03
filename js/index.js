@@ -38,6 +38,8 @@ app.controller("mainCtrl", [
       $scope.userNotFound = false;
       $scope.loaded = false;
       $scope.nouser = false;
+      $scope.isloading = true;
+      $scope.loading = true;
 
       $location.url($scope.username);
 
@@ -57,6 +59,8 @@ app.controller("mainCtrl", [
           });
           $scope.user = getAllIssues;
           $scope.loaded = true;
+          $scope.loading = true;
+          $scope.isloading = false;
         })
         .error(function(err) {
           $scope.userNotFound = true;
@@ -65,6 +69,8 @@ app.controller("mainCtrl", [
           } else {
             $scope.errorName = "No open issue found for " + $scope.username;
           }
+          $scope.loading = true;
+          $scope.isloading = false;
         });
     };
     if ($stateParams.username) {
