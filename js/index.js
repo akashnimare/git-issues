@@ -32,6 +32,8 @@ app.controller("repoCtrl", [
     $scope.main = {
       page: 1
     };
+    $scope.username = $stateParams.username + '/' + $stateParams.reponame;
+    console.log($scope.username);
     $scope.loaded = false;
     $http
       .get(
