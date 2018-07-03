@@ -352,6 +352,7 @@ a.active {
 li {
     font-size: 15px;
     padding-bottom: 10px;
+    line-height: 1.2rem;
 }
 
 .info {
