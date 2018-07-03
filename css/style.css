@@ -205,9 +205,14 @@ a:hover {
 }
 
 .issue-top {
-    margin-bottom: 25px;
-    min-height: 90px;
-    border-bottom: 2px solid #f4f5f9;
+    height: auto;
+}
+
+.issue-details {
+    border-top: 2px solid #f4f5f9;
+    padding-top: 20px;
+    margin-top: 10px;
+    display: block;
 }
 
 .left {
@@ -402,7 +407,7 @@ button {
 
 /* markdown styling */
 
-code {
+pre code {
     background: #f4f5f9;
     display: block;
     font-size: 1rem;
@@ -410,6 +415,14 @@ code {
     overflow: scroll;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, 0.05);
+    border-radius: 3px;
 }
 
 blockquote p {
