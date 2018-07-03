@@ -29,19 +29,17 @@ app.controller("mainCtrl", [
     $scope.main = {
       page: 1
     };
-    // // update hash location
-    // if (!$stateParams.username) {
-    //   $location.url($scope.username);
-    //   console.log($stateParams);
-    // }
+    $scope.username = $stateParams.username
+      ? $stateParams.username + "/" + $stateParams.reponame
+      : $scope.username;
+
     $scope.getGitInfo = function() {
+      console.log($scope.username);
       $scope.userNotFound = false;
       $scope.loaded = false;
       $scope.nouser = false;
-      // $location.url($scope.username);
-      $scope.username = $stateParams.username
-        ? $stateParams.username + "/" + $stateParams.reponame
-        : $scope.username;
+
+      $location.url($scope.username);
 
       $http
         .get(
