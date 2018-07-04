@@ -51,9 +51,11 @@
             <h2>All issues are loaded.</h2>
         </div>
 
-        <button class="pagination" ng-if="main.page > 1" ng-click='prePage()'>Previous</button>
-        <button class="pagination" ng-click='nextPage()' ng-hide="user=='undefined' ||user=='null' || user.length==0">Next</a>
-        </button>
+        <div class="pagination">
+            <button ng-disabled="disableBtn" ng-click='prePage()' ng-init="disableBtn=true">Previous</button>
+
+            <button ng-click='nextPage()' ng-hide="user=='undefined' ||user=='null' || user.length==0">Next</button>
+        </div>
     </div>
 
 </div>

@@ -164,20 +164,33 @@ a:hover {
 }
 
 .pagination {
-    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 33%;
+}
+
+.pagination button {
+    padding: 7px 17px;
     font-size: 18px;
     font-weight: bold;
     color: #444;
-    margin-top: 6px;
+    margin-left: 30px;
     cursor: pointer;
     background-color: #f4f5f9;
     border-radius: 8px;
     border: 5px solid #ddd;
 }
 
-.pagination:hover {
+.pagination button:hover {
     color: #696969;
     background: #fff;
+}
+
+button[disabled] {
+    background: #fff;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 #gitsubmitbtn {

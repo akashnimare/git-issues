@@ -29,12 +29,12 @@ app.controller("mainCtrl", [
     $scope.main = {
       page: 1
     };
+
     $scope.username = $stateParams.username
       ? $stateParams.username + "/" + $stateParams.reponame
       : $scope.username;
 
     $scope.getGitInfo = function() {
-      console.log($scope.username);
       $scope.userNotFound = false;
       $scope.loaded = false;
       $scope.nouser = false;
@@ -79,6 +79,7 @@ app.controller("mainCtrl", [
     $scope.nextPage = function() {
       $scope.main.page++;
       $scope.getGitInfo();
+      $scope.disableBtn = false;
     };
     $scope.prePage = function() {
       $scope.main.page--;
