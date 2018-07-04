@@ -41,6 +41,10 @@ app.controller("mainCtrl", [
       $scope.isloading = true;
       $scope.loading = true;
 
+      if ($scope.main.page <= 1) {
+        $scope.disableBtn = true;
+      }
+
       $location.url($scope.username);
 
       $http
