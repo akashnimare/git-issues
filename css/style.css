@@ -513,3 +513,34 @@ code {
         transform: rotate(360deg);
     }
 }
+
+/* # footer */
+
+footer {
+    position: absolute;
+    margin-left: calc(38%);
+    margin-top: calc(39%);
+}
+
+.footer-links li {
+    list-style: none;
+    padding: 8px;
+    color: #121621;
+    margin-right: 10px;
+    display: block;
+    border: 2px solid #232424;
+    border-radius: 5px;
+    background: #f4f5f9;
+}
+
+.footer-links a {
+    cursor: pointer;
+    color: #242424;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+.footer-links {
+    display: inline-flex
+}
