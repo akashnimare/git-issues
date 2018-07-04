@@ -20,15 +20,13 @@ img {
     box-sizing: border-box;
 }
 
-html {
-    overflow-y: scroll;
-}
-
+html,
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1;
     color: #616161;
     background: #f4f5f9;
+    height: 100%;
 }
 
 input,
@@ -332,9 +330,6 @@ button[disabled] {
     padding: 22px;
     overflow: auto;
 }
-
-}
-
 a.active {
     color: red !important;
 }
@@ -519,7 +514,9 @@ code {
 footer {
     position: absolute;
     margin-left: calc(38%);
-    margin-top: calc(39%);
+    /* margin-top: calc(39%); */
+    /* margin-top: 200px; */
+    margin-bottom: 100px;
 }
 
 .footer-links li {
@@ -541,6 +538,7 @@ footer {
 .footer-links a:hover {
     opacity: 0.6;
 }
+
 .footer-links {
     display: inline-flex
 }
