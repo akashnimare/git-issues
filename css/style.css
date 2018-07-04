@@ -129,8 +129,8 @@ a:hover {
 
 .searchbar {
     display: block;
-    left: 51%;
-    width: 400px;
+    left: 50%;
+    width: 500px;
     position: absolute;
     margin-left: -200px;
     margin-top: 12px;
@@ -308,8 +308,6 @@ a:hover {
     overflow: auto;
 }
 
-}
-
 a.active {
     color: red !important;
 }
@@ -475,4 +473,26 @@ blockquote p {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* # footer */
+
+footer {
+    margin-left: 37%;
+    margin-top: calc(70vh);
+}
+
+.footer-links {
+    display: flex;
+}
+.footer-links li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+select {
+    border-radius: 5px;
+    height: 40px;
+    vertical-align: top;
+    font-size: 20px;
 }

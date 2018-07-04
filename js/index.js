@@ -20,6 +20,17 @@ app.config([
   }
 ]);
 
+app.controller("repoCtrl", [
+  "$scope",
+  "$http",
+  "$stateParams",
+  "$location",
+  function($scope, $http, $stateParams, $location) {
+    console.log($scope.value);
+    $scope.getGitInfo();
+  }
+]);
+
 app.controller("mainCtrl", [
   "$scope",
   "$http",
@@ -29,35 +40,71 @@ app.controller("mainCtrl", [
     $scope.main = {
       page: 1
     };
+    $scope.options = [
+      {
+        label: "issues",
+        value: "issues"
+      },
+      {
+        label: "Pull requests",
+        value: "pulls"
+      }
+    ];
+
+    $scope.value = $scope.options[0].value;
+
+    console.log("before", $scope.value);
+
     $scope.username = $stateParams.username
       ? $stateParams.username + "/" + $stateParams.reponame
       : $scope.username;
 
     $scope.getGitInfo = function() {
-      console.log($scope.username);
       $scope.userNotFound = false;
       $scope.loaded = false;
       $scope.nouser = false;
       $scope.isloading = true;
       $scope.loading = true;
 
+      // $scope.value = $scope.value;
+
       $location.url($scope.username);
+
+      console.log($scope.value);
 
       $http
         .get(
           "https://api.github.com/repos/" +
             $scope.username +
-            "/issues?state=open&page=" +
+            "/" +
+            "issues" +
+            "?state=open&page=" +
             $scope.main.page +
             "&per_page=20"
         )
         .success(function(data) {
           // This data contains both pull_requests and issues since we only
           // need the issues let's filter out the pull_requests
-          let getAllIssues = data.filter(Element => {
+          console.log("success", $scope.value);
+
+          const getAllIssues = data.filter(Element => {
             return !Element["pull_request"];
           });
-          $scope.user = getAllIssues;
+
+          const getAllPRs = data.filter(Element => {
+            return Element["pull_request"];
+          });
+
+          if ($scope.value === "issues") {
+            $scope.user = getAllIssues;
+          }
+
+          if ($scope.value === "pulls") {
+            $scope.user = getAllPRs;
+          }
+
+          console.log($scope.user);
+
           $scope.loaded = true;
           $scope.loading = true;
           $scope.isloading = false;
@@ -74,6 +121,7 @@ app.controller("mainCtrl", [
         });
     };
     if ($stateParams.username) {
+      // $scope.value = "issues";
       $scope.getGitInfo();
     }
     $scope.nextPage = function() {

@@ -1,4 +1,4 @@
-<div ng-controller="mainCtrl">
+<div ng-controller="repoCtrl">
     <div ng-show="loaded" ng-cloak class="issue-card">
         <div ng-repeat="row in user" class="issue-single">
             <div class="issues-list">
@@ -55,5 +55,4 @@
         <button class="pagination" ng-click='nextPage()' ng-hide="user=='undefined' ||user=='null' || user.length==0">Next</a>
         </button>
     </div>
-
 </div>
