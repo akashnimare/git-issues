@@ -512,11 +512,9 @@ code {
 /* # footer */
 
 footer {
-    position: absolute;
+    position: relative;
     margin-left: calc(38%);
-    /* margin-top: calc(39%); */
-    /* margin-top: 200px; */
-    margin-bottom: 100px;
+    margin-top: calc(-12%);
 }
 
 .footer-links li {
