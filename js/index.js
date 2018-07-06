@@ -74,9 +74,9 @@ app.controller("mainCtrl", [
         .error(function(err) {
           $scope.userNotFound = true;
           if (!$scope.username) {
-            $scope.errorName = "Please enter a vaild repo name";
+            $scope.errorName = "Please enter a valid repo name";
           } else {
-            $scope.errorName = "No open issue found for " + $scope.username;
+            $scope.errorName = "No open issues found for " + $scope.username;
           }
           $scope.loading = true;
           $scope.isloading = false;
