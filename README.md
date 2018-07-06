@@ -1,4 +1,4 @@
-Browse GitHub issues
+Browse GitHub issues [WIP]
 =======
 
 A better and quick way to browse GitHub issues -
