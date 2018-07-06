@@ -214,13 +214,24 @@ button[disabled] {
 }
 
 .issue-top {
-    height: auto;
+    /* height: auto;
     background: #eee;
     padding: 25px;
     cursor: pointer;
 
     margin-left: -22px;
-    width: 106%;
+    width: 106%; */
+    /* border: 2px solid; */
+    /* border-radius: 8px; */
+    /* border-left: 2px solid; */
+    /* margin-top: -26px; */
+
+    height: auto;
+    background: #eee;
+    padding: 25px;
+    cursor: pointer;
+    margin-left: -24px;
+    width: 105%;
     /* border: 2px solid; */
     /* border-radius: 8px; */
     border-left: 2px solid;
@@ -275,7 +286,7 @@ button[disabled] {
     font-weight: 600;
     vertical-align: text-bottom;
     border-radius: 5px;
-    padding: 0px 5px 0 5px;
+    padding: 1px 5px 0 5px;
     height: 20px;
     margin: 0 !important;
     font-size: 13px;
@@ -319,6 +330,7 @@ button[disabled] {
     padding: 3px 6px;
     margin-right: 14px;
     font-size: 13px;
+    color: #fff;
 }
 
 .comments {
@@ -340,7 +352,7 @@ button[disabled] {
 }
 
 .issues-list {
-    margin: 20px 20px 20px 0px;
+    /* margin: 20px 20px 20px 0px;
     text-align: left;
     text-decoration: none;
     border: 6.2px solid #f4f5f9;
@@ -349,7 +361,17 @@ button[disabled] {
     min-height: 70px;
     border-radius: 8px;
     padding: 22px;
-    overflow: auto;
+    overflow: auto; */
+
+    margin-bottom: 20px;
+    text-align: left;
+    text-decoration: none;
+    border: 6.2px solid #f4f5f9;
+    display: block;
+    background: #fff;
+    min-height: 70px;
+    border-radius: 8px;
+    padding: 22px;
 }
 
 a.active {
