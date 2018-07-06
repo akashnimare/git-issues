@@ -11,7 +11,7 @@
                 </div>
                 <div class="right">
                     <span class="issue-title">
-                        <a href="{{row.html_url}}" ng-class="isActive(row)">{{row.title}}
+                        <a ng-href="{{row.html_url}}" ng-class="isActive(row)" ng-click="expandComments($event);$event.preventDefault()">{{row.title}}
                         </a>
                     </span>
                     <div class="issue-summary">

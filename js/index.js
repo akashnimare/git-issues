@@ -76,8 +76,9 @@ app.controller("mainCtrl", [
           if (!$scope.username) {
             $scope.errorName = "Please enter a valid repo name";
           } else {
-            $scope.errorName = "No open issues found for " + $scope.username;
+            $scope.errorName = "No open issues found for " + $scope.username + ' ' + err.message;
           }
+          // console.log(err.message);
           $scope.loading = true;
           $scope.isloading = false;
         });
@@ -94,11 +95,11 @@ app.controller("mainCtrl", [
       $scope.main.page--;
       $scope.getGitInfo();
     };
-    // $scope.UserComment = function(event) {
-    //   $http.get(event.target.id).success(function(data) {
-    //     $scope.comments = data;
-    //   });
-    // };
+    $scope.expandComments = function(event) {
+      $http.get(event.target.id).success(function(data) {
+        $scope.comments = data;
+      });
+    };
     $scope.UserComments = function(event) {
       $http.get(event).success(function(data) {
         $scope.comments = data;

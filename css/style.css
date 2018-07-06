@@ -239,6 +239,11 @@ button[disabled] {
 
 }
 
+.issue-top:hover {
+    box-shadow: 0 0 1px #eaeaea;
+    /* border-left: none; */
+}
+
 .issue-details {
     /* border-top: 2px solid #f4f5f9; */
     padding-top: 20px;
