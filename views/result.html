@@ -11,7 +11,7 @@
                 </div>
                 <div class="right">
                     <span class="issue-title">
-                        <a href="{{row.html_url}}" ng-class="isActive(row)" >{{row.title}}
+                        <a href="{{row.html_url}}" ng-class="isActive(row)">{{row.title}}
                         </a>
                     </span>
                     <div class="issue-summary">
@@ -20,8 +20,8 @@
                                 {{row.comments}}
                             </span>
                         </span>
-                        <span class="issue-label" ng-repeat="label in row.labels" style="color: {{label.color}}">
-                            <button> {{label.name}} </button>
+                        <span class="issue-label" ng-repeat="label in row.labels">
+                            <button ng-style="{ background: '#' + label.color}"> {{label.name}} </button>
                         </span>
                     </div>
                 </div>

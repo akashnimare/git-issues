@@ -255,7 +255,7 @@ button[disabled] {
 }
 
 .num {
-    position: relative;
+    /* position: relative;
     background-color: #000000;
     color: #fff;
     text-align: center;
@@ -266,7 +266,22 @@ button[disabled] {
     margin: 0 !important;
     line-height: -11px !important;
     display: inline-block;
-    min-width: 33px;
+    min-width: 33px; */
+
+    position: relative;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    vertical-align: text-bottom;
+    border-radius: 5px;
+    padding: 0px 5px 0 5px;
+    height: 20px;
+    margin: 0 !important;
+    font-size: 13px;
+    line-height: -11px !important;
+    display: inline-block;
+    min-width: 28px;
 }
 
 .num::after {
@@ -292,12 +307,18 @@ button[disabled] {
 }
 
 .issue-label button {
-    background: #ccc;
-    float: left;
+    /* background: #ccc; */
+    /* float: left;
     border-radius: 10px;
     margin-right: 14px;
     font-size: 15px;
-    border: 1px solid #cccccc;
+    border: 1px solid #cccccc; */
+
+    float: left;
+    border-radius: 10px;
+    padding: 3px 6px;
+    margin-right: 14px;
+    font-size: 13px;
 }
 
 .comments {
