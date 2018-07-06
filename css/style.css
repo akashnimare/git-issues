@@ -503,11 +503,11 @@ footer p {
     padding-bottom: 50px;
 }
 
-footer a {
+footer, .about a {
     font-size: 18px;
 }
 
-footer a:hover {
+footer, .about a:hover {
     text-decoration: underline;
 }
 
