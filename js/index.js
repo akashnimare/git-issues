@@ -16,6 +16,11 @@ app.config([
       controller: "mainCtrl"
     });
 
+    $stateProvider.state("about", {
+      url: "/about",
+      templateUrl: "/views/about.html"
+    });
+
     $urlRouterProvider.otherwise("home");
   }
 ]);

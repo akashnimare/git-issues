@@ -412,7 +412,6 @@ button {
 
 /* markdown styling */
 
-
 .lds-ripple {
     display: inline-block;
     position: relative;
@@ -506,4 +505,21 @@ footer p {
 
 footer a {
     font-size: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    vertical-align: middle;
+}
+
+.about {
+    margin-bottom: 80%;
+    margin-bottom: 80%;
+    width: 500px;
+    margin-top: 120px !IMPORTANT;
+    margin-bottom: 15% !IMPORTANT;
+    margin: auto;
 }
