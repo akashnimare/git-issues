@@ -94,8 +94,13 @@ app.controller("mainCtrl", [
       $scope.main.page--;
       $scope.getGitInfo();
     };
-    $scope.UserComment = function(event) {
-      $http.get(event.target.id).success(function(data) {
+    // $scope.UserComment = function(event) {
+    //   $http.get(event.target.id).success(function(data) {
+    //     $scope.comments = data;
+    //   });
+    // };
+    $scope.UserComments = function(event) {
+      $http.get(event).success(function(data) {
         $scope.comments = data;
       });
     };
