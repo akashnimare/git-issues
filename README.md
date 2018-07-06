@@ -21,11 +21,10 @@ GitHub has an api limit so once you hit it, issues won't be able to load. This w
 
 ## I want to improve this project?
 
-Please do ❤️. The project is built on top of Angularjs and hardly contains 100s loc in js.
-
-## Related
-- [ReadAMA](https://github.com/akashnimare/ReadAMA)
- 
+Please do ❤️. The project is built on top of Angularjs and hardly contains 100s loc in js. 
 
 # License
 Released under the [MIT](./LICENSE) license.
+
+# Related
+- [ReadAMA](https://github.com/akashnimare/ReadAMA)
