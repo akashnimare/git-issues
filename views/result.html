@@ -21,7 +21,9 @@
                             </span>
                         </span>
                         <span class="issue-label" ng-repeat="label in row.labels">
-                            <button ng-style="{ background: '#' + label.color}"> {{label.name}} </button>
+                            <button ng-style="{
+                                'background': '#' + label.color,
+                                'border-color': '#' + label.color}"> {{label.name}} </button>
                         </span>
                     </div>
                 </div>
