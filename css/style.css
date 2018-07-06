@@ -57,8 +57,7 @@ h1 {
 .heading {
     font-size: 2em;
     line-height: 1.5em;
-    margin-bottom: 4px;
-    margin-top: 15px;
+    margin: 15px auto;
     text-align: center;
     color: black;
 }
@@ -94,7 +93,7 @@ a:hover {
 .issue-title a {
     color: #00387b;
     font-size: 20px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .issue_number {
@@ -155,9 +154,9 @@ a:hover {
     padding: 5px 8px;
     font-size: 1.5em;
     color: #666;
-    width: 300px;
+    width: 350px;
     border: 2px solid #eaeaea;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .pagination {
@@ -219,12 +218,20 @@ button[disabled] {
     background: #eee;
     padding: 25px;
     cursor: pointer;
+
+    margin-left: -22px;
+    width: 106%;
+    /* border: 2px solid; */
+    /* border-radius: 8px; */
+    border-left: 2px solid;
+    margin-top: -26px;
+
 }
 
 .issue-details {
-    border-top: 2px solid #f4f5f9;
+    /* border-top: 2px solid #f4f5f9; */
     padding-top: 20px;
-    margin-top: 10px;
+    margin: 10px 0;
     display: block;
 }
 
@@ -319,7 +326,7 @@ button[disabled] {
     display: block;
     background: #fff;
     min-height: 70px;
-    border-radius: 13px;
+    border-radius: 8px;
     padding: 22px;
     overflow: auto;
 }
