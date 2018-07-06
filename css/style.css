@@ -61,7 +61,6 @@ h1 {
     margin-top: 15px;
     text-align: center;
     color: black;
-    margin-left: -31px;
 }
 
 .error h3 {
@@ -126,12 +125,12 @@ a:hover {
 }
 
 .searchbar {
-    display: block;
-    left: 51%;
-    width: 400px;
-    position: absolute;
-    margin-left: -200px;
-    margin-top: 12px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90%;
 }
 
 .search-icon {
@@ -246,16 +245,6 @@ button[disabled] {
 }
 
 .num {
-    /* position: relative;
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 5px;
-    padding: 4px 5px 0 5px;
-    height: 19px;
-    display: inline-block;
-    min-width: 20px; */
     position: relative;
     background-color: #000000;
     color: #fff;
@@ -311,11 +300,12 @@ button[disabled] {
 
 .issue-card {
     width: 1000px;
-    position: absolute;
-    left: 50%;
-    margin-left: -500px;
+    position: relative;
+    text-align: center;
     margin-bottom: 200px;
-    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -88%;
 }
 
 .issues-list {
@@ -330,6 +320,7 @@ button[disabled] {
     padding: 22px;
     overflow: auto;
 }
+
 a.active {
     color: red !important;
 }
@@ -355,25 +346,6 @@ a.active {
     margin-left: 10px;
     margin-top: 2px;
 }
-
-/* .mdcomments a {
-    font-size: 23px;
-    margin: 0;
-    word-wrap: break-word;
-    line-height: 0;
-}
-
-.mdcomments li {
-    font-size: 20px;
-    line-height: 1.35em;
-    margin-bottom: 12px;
-}
-
-li {
-    font-size: 15px;
-    padding-bottom: 10px;
-    line-height: 1.2rem;
-} */
 
 .mdcomments p {
     padding-bottom: 12px !important;
@@ -440,38 +412,13 @@ button {
 
 /* markdown styling */
 
-/* pre code {
-    background: #f4f5f9;
-    display: block;
-    font-size: 1rem;
-    padding: 20px;
-    overflow: scroll;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-code {
-    padding: 0.2em 0.4em;
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(27, 31, 35, 0.05);
-    border-radius: 3px;
-} */
-
-/* blockquote p {
-    background: #f4f5f9;
-    display: block;
-    padding: 20px;
-    font-size: 1rem;
-} */
 
 .lds-ripple {
     display: inline-block;
     position: relative;
     width: 150px;
-    position: absolute;
-    left: 25%;
-    margin-top: 112px;
+    left: 0%;
+    margin-top: 90px;
     height: 150px;
 }
 
@@ -513,8 +460,15 @@ code {
 
 footer {
     position: relative;
-    margin-left: calc(38%);
-    margin-top: calc(-12%);
+    text-align: center;
+}
+
+footer .container {
+    display: inline-block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
 }
 
 .footer-links li {
@@ -538,5 +492,18 @@ footer {
 }
 
 .footer-links {
-    display: inline-flex
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+footer p {
+    width: 500px;
+    position: absolute;
+    border-top: 2px solid currentColor;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+footer a {
+    font-size: 18px;
 }

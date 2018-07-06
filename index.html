@@ -10,15 +10,17 @@
 </head>
 
 <body ng-app="git-issues" ng-controller="mainCtrl">
-    <ui-view></ui-view>
-    <div ng-include="'views/footer.html'"></div>
+    <div class="box">
+        <ui-view></ui-view>
+        <div ng-include="'views/footer.html'"></div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-resource.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 
     <script src="js/ngRoute.js"></script>
-    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
     <script src="js/marked.js"></script>
     <script src="js/angular-marked.js"></script>
     <script src="js/index.js"></script>
