@@ -40,6 +40,11 @@ app.controller("mainCtrl", [
       : $scope.username;
 
     $scope.getGitInfo = function() {
+      if (!$scope.username) {
+        $scope.errorName = "Please enter a valid repo name";
+        return;
+      }
+
       $scope.userNotFound = false;
       $scope.loaded = false;
       $scope.nouser = false;
@@ -60,7 +65,7 @@ app.controller("mainCtrl", [
             $scope.main.page +
             "&per_page=20"
         )
-        .success(function(data) {
+        .success(function(data, status) {
           // This data contains both pull_requests and issues since we only
           // need the issues let's filter out the pull_requests
           let getAllIssues = data.filter(Element => {
@@ -68,20 +73,21 @@ app.controller("mainCtrl", [
           });
           $scope.user = getAllIssues;
           $scope.loaded = true;
-          $scope.loading = true;
-          $scope.isloading = false;
         })
-        .error(function(err) {
-          $scope.userNotFound = true;
-          if (!$scope.username) {
-            $scope.errorName = "Please enter a valid repo name";
-          } else {
-            $scope.errorName = "No open issues found for " + $scope.username + ' ' + err.message;
+        .error(function(err, status) {
+          if(status === 404){
+              $scope.errorName = "Repo not found";
           }
-          // console.log(err.message);
-          $scope.loading = true;
-          $scope.isloading = false;
+
+          if(status === 403 || status === 500){
+            $scope.errorName = "Unable to fetch repo issues";
+          }
+
+          $scope.userNotFound = true;
         });
+
+        $scope.loading = true;
+        $scope.isloading = false;
     };
     if ($stateParams.username) {
       $scope.getGitInfo();
