@@ -71,8 +71,16 @@ app.controller("mainCtrl", [
           let getAllIssues = data.filter(Element => {
             return !Element["pull_request"];
           });
-          $scope.user = getAllIssues;
-          $scope.loaded = true;
+
+          // if there are no issues
+          if(!getAllIssues.length){
+            $scope.errorName = "No issues found for this repo";
+            $scope.userNotFound = true;
+          }
+          else{
+            $scope.user = getAllIssues;
+            $scope.loaded = true;
+          }
         })
         .error(function(err, status) {
           if(status === 404){
