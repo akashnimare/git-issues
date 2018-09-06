@@ -3,7 +3,7 @@ var app = angular.module("git-issues", ["ngRoute", "ui.router", "hc.marked"]);
 app.config([
   "$stateProvider",
   "$urlRouterProvider",
-  function($stateProvider, $urlRouterProvider) {
+  function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state("home", {
       url: "/home",
       templateUrl: "/views/repo.html",
@@ -30,7 +30,7 @@ app.controller("mainCtrl", [
   "$http",
   "$stateParams",
   "$location",
-  function($scope, $http, $stateParams, $location) {
+  function ($scope, $http, $stateParams, $location) {
     $scope.main = {
       page: 1
     };
@@ -39,7 +39,7 @@ app.controller("mainCtrl", [
       ? $stateParams.username + "/" + $stateParams.reponame
       : $scope.username;
 
-    $scope.getGitInfo = function() {
+    $scope.getGitInfo = function () {
       if (!$scope.username) {
         $scope.errorName = "Please enter a valid repo name";
         return;
@@ -60,12 +60,12 @@ app.controller("mainCtrl", [
       $http
         .get(
           "https://api.github.com/repos/" +
-            $scope.username +
-            "/issues?state=open&page=" +
-            $scope.main.page +
-            "&per_page=20"
+          $scope.username +
+          "/issues?state=open&page=" +
+          $scope.main.page +
+          "&per_page=20"
         )
-        .success(function(data, status) {
+        .success(function (data, status) {
           // This data contains both pull_requests and issues since we only
           // need the issues let's filter out the pull_requests
           let getAllIssues = data.filter(Element => {
@@ -73,49 +73,49 @@ app.controller("mainCtrl", [
           });
 
           // if there are no issues
-          if(!getAllIssues.length){
-            $scope.errorName = "No issues found for this repo";
+          if (!getAllIssues.length) {
+            $scope.errorName = "No open issues found for this repo";
             $scope.userNotFound = true;
           }
-          else{
+          else {
             $scope.user = getAllIssues;
             $scope.loaded = true;
           }
         })
-        .error(function(err, status) {
-          if(status === 404){
-              $scope.errorName = "Repo not found";
+        .error(function (err, status) {
+          if (status === 404) {
+            $scope.errorName = "Repo not found";
           }
 
-          if(status === 403 || status === 500){
+          if (status === 403 || status === 500) {
             $scope.errorName = "Unable to fetch repo issues";
           }
 
           $scope.userNotFound = true;
         });
 
-        $scope.loading = true;
-        $scope.isloading = false;
+      $scope.loading = true;
+      $scope.isloading = false;
     };
     if ($stateParams.username) {
       $scope.getGitInfo();
     }
-    $scope.nextPage = function() {
+    $scope.nextPage = function () {
       $scope.main.page++;
       $scope.getGitInfo();
       $scope.disableBtn = false;
     };
-    $scope.prePage = function() {
+    $scope.prePage = function () {
       $scope.main.page--;
       $scope.getGitInfo();
     };
-    $scope.expandComments = function(event) {
-      $http.get(event.target.id).success(function(data) {
+    $scope.expandComments = function (event) {
+      $http.get(event.target.id).success(function (data) {
         $scope.comments = data;
       });
     };
-    $scope.UserComments = function(event) {
-      $http.get(event).success(function(data) {
+    $scope.UserComments = function (event) {
+      $http.get(event).success(function (data) {
         $scope.comments = data;
       });
     };
